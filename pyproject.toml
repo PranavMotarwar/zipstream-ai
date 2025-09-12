@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "zipstream-ai"
+version = "0.1.0"
+description = "Stream and query zipped datasets using LLMs"
+authors = ["Pranav Nitin Motarwar <pranavmotarwar@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "zipstream_ai" }]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+openai = "^1.10.0"
+pandas = "^2.0"
+python-dotenv = "^1.0.0"
+typer = "^0.9.0"
+pillow = "^10.0.0"
+
+[tool.poetry.scripts]
+zipstream-ai = "zipstream_ai.cli:app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
