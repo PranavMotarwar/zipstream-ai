@@ -14,7 +14,7 @@ class FileParser:
             dialect = sniffer.sniff(sample_str)
             return dialect.delimiter
         except csv.Error:
-            return ','  # fallback default
+            return ','
 
     def load(self, file_path: str):
         content = self.reader.read_file(file_path)
