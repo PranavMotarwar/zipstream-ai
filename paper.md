@@ -48,22 +48,13 @@ The package supports both programmatic and CLI-based workflows. It’s ideal for
 - use LLMs as data analysts over `.zip` archives, or
 - teach students to interact with datasets without unpacking them.
 
-# Methodology
+## Methodology
 
-The core modules of `zipstream-ai` are:
+The architecture of `zipstream-ai` is built around three primary Python modules. `ZipStreamReader` allows users to directly stream and list contents from compressed `.zip` and `.tar.gz` archives without requiring extraction. This minimizes disk usage and accelerates the workflow, particularly for large datasets. On top of this, `FileParser` automatically detects file formats such as `.csv`, `.json`, `.txt`, and `.md`, and parses them into structured Python-native objects, usually using `pandas`. It also detects common delimiters like commas, semicolons, and tabs, ensuring flexible parsing.
 
-- **ZipStreamReader**: Streams from `.zip` and `.tar.gz` archives, lists and reads file content without extracting.
-- **FileParser**: Automatically detects and parses `.csv`, `.json`, `.txt`, and `.md` files. CSV files support delimiter detection.
-- **ask()**: Sends a formatted prompt using a sample of the dataset (e.g., `df.head()` or parsed content) to an LLM (via OpenAI API) and returns a natural language response.
+The third component, `ask()`, enables natural language interaction with the parsed data by leveraging OpenAI’s GPT models. This function constructs prompts from representative data (e.g., DataFrame head or content sample) and queries the LLM to generate insights, summaries, or perform analytical reasoning.
 
-Additional features include:
-
-- dotenv integration for API key management
-- CLI tool built with `typer`
-- Streaming-safe architecture (no temporary disk files)
-- Support for semicolon- and tab-delimited CSVs
-
-Future versions may include image files with OCR, audio transcripts, and local LLM integrations.
+To support diverse usage, the package includes `.env` file support for secure API key management via `python-dotenv`, and a command-line interface (CLI) built with `typer` that supports interactive browsing and querying. The architecture is streaming-safe, avoiding temporary files, and is designed to plug into both Jupyter-based workflows and backend pipelines. Planned extensions include support for OCR, audio transcription, and integration with open-source LLMs for offline use.
 
 # Related Work
 
