@@ -14,6 +14,7 @@ pandas = "^2.0"
 python-dotenv = "^1.0.0"
 typer = "^0.9.0"
 pillow = "^10.0.0"
+google-generativeai = "^0.4.1"
 
 [tool.poetry.scripts]
 zipstream-ai = "zipstream_ai.cli:app"
