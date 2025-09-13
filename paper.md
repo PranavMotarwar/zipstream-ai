@@ -40,10 +40,10 @@ These limitations are especially problematic in LLM-powered environments, where 
 
 The package supports both programmatic and CLI-based workflows. It’s ideal for users who want to:
 
-- explore ZIPs on the go in Jupyter,
-- integrate compressed data into RAG pipelines,
-- use LLMs as data analysts over `.zip` archives, or
-- teach students to interact with datasets without unpacking them.
+- interact with structured data inside compressed files without manual extraction,
+- explore ZIP archives directly within Jupyter like environments,
+- integrate compressed datasets into Retrieval-Augmented Generation (RAG) pipelines,
+- perform natural language querying of archived data using LLMs.
 
 ## Methodology
 
