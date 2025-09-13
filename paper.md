@@ -55,7 +55,7 @@ To support diverse usage, the package includes `.env` file support for secure AP
 
 # Related Work
 
-While Python provides built-in modules for archive access, they do not integrate with data parsing or LLM-based interaction. `pandas` supports reading from `.zip` paths if you know the file name, but does not support interactive exploration or file listing. Other zip-based data loaders require configuration or known formats.
+While Python provides built-in modules for archive access, they do not integrate with data parsing or LLM-based interaction. `pandas` supports reading from `.zip` paths [@motarwar2025zipstream] if you know the file name, but does not support interactive exploration or file listing. Other zip-based data loaders require configuration or known formats.
 
 To our knowledge, **zipstream-ai** is the first open-source tool that integrates archive reading, format detection, data parsing, and LLM-based querying in a single command-line or Python interface.
 
@@ -74,7 +74,5 @@ zipstream-ai is actively maintained and openly available. The source code is hos
 This project was developed by Pranav Motarwar and Rudra Patil as part of their applied machine learning research work. The tool reflects an independent effort to streamline LLM-based interaction with compressed datasets.
 
 # References
-
-See `paper.bib` for all references.
 
 
