@@ -1,27 +1,33 @@
-import openai
-import pandas as pd
 import os
 from dotenv import load_dotenv
+import pandas as pd
+import google.generativeai as genai
 
 load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
-def ask(data, question: str) -> str:
-    if isinstance(data, pd.DataFrame):
-        sample = data.head(10).to_csv(index=False)
-        prompt = f"""
-You are a helpful data analyst.
-
-Here is a sample of the data:
-{sample}
-
-Question: {question}
-Answer:
-"""
-        response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
-            messages=[{"role": "user", "content": prompt}]
-        )
-        return response.choices[0].message["content"]
+def ask(data, query):
+    """
+    Ask a natural language question about the dataset using Google Gemini API.
+    Supports both DataFrames and plain text content.
+    """
+    if isinstance(data, str):
+        sample = data[:3000]
+    elif isinstance(data, pd.DataFrame):
+        sample = data.head().to_string()
     else:
-        return "Only DataFrame-based queries are supported for now."
+        sample = str(data)
+
+    prompt = f"""You are a helpful assistant for exploring datasets.
+
+--- DATA SAMPLE ---
+{sample}
+-------------------
+
+Now answer the question:
+{query}
+"""
+
+    model = genai.GenerativeModel("gemini-pro")
+    response = model.generate_content(prompt)
+    return response.text
