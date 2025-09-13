@@ -7,9 +7,11 @@ tags:
   - file streaming
   - natural language interfaces
 authors:
-  - name: Pranav Nitin Motarwar
+  - name: Pranav Motarwar
     orcid: 0000-0003-2020-2020
     corresponding: true
+    affiliation: 1
+  - name: Rudra Patil
     affiliation: 1
 affiliations:
   - name: New York University
@@ -62,4 +64,29 @@ Additional features include:
 - Support for semicolon- and tab-delimited CSVs
 
 Future versions may include image files with OCR, audio transcripts, and local LLM integrations.
+
+# Related Work
+
+While Python provides built-in modules for archive access (`zipfile`, `tarfile`), they do not integrate with data parsing or LLM-based interaction. `pandas` supports reading from `.zip` paths if you know the file name, but does not support interactive exploration or file listing. Other zip-based data loaders (e.g., Hugging Face datasets) require configuration or known formats.
+
+To our knowledge, **zipstream-ai** is the first open-source tool that integrates archive reading, format detection, data parsing, and LLM-based querying in a single command-line or Python interface.
+
+# Implementation
+
+The package is implemented in pure Python 3.8+ and relies on several widely adopted libraries including `pandas` for data manipulation, `openai` for LLM access, `typer` for building the command-line interface, and `python-dotenv` for managing environment variables securely. The LLM integration is handled via OpenAI’s `chat.completions` endpoint, with extensive testing across both GPT-3.5 and GPT-4 models to ensure compatibility.
+
+The CLI is built using `typer`, allowing for clean argument parsing and quick extensibility. For development and testing, `pytest` is used, and the package supports editable installation (`pip install -e .`) to facilitate rapid iteration. The entire project is open-source under the MIT license, available on GitHub, and published on PyPI for ease of installation.
+
+# Project Status
+
+zipstream-ai is actively maintained and openly available. The source code is hosted on GitHub, the package is published on PyPI, and the project is licensed under MIT. This draft was last updated on 12 September 2025.
+
+# Acknowledgements
+
+This project was developed by Pranav Motarwar as part of NYU’s applied machine learning research initiative. Special thanks to peers and professors at NYU Tandon for continuous feedback and inspiration throughout the development of this tool.
+
+# References
+
+See `paper.bib` for all references.
+
 
