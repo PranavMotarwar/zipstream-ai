@@ -16,7 +16,7 @@ authors:
 affiliations:
   - name: New York University
     index: 1
-    ror: 00hx57361
+    ror: 0190ak572
 date: 12 September 2025
 bibliography: paper.bib
 ---
