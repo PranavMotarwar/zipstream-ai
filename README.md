@@ -14,7 +14,7 @@
 
 ---
 
-## 🔧 Installation
+## Installation
 
 ```bash
 pip install zipstream-ai
@@ -22,7 +22,7 @@ pip install zipstream-ai
 
 ---
 
-## 🚀 Features
+## Features
 
 | Feature                     | Description                                                                 |
 |----------------------------|-----------------------------------------------------------------------------|
@@ -35,7 +35,7 @@ pip install zipstream-ai
 
 ---
 
-## 📦 Use Case Examples
+## Use Case Examples
 
 ### 1. Load & Explore ZIP
 
@@ -67,7 +67,7 @@ print(response)
 
 ---
 
-## 📉 Why zipstream-ai?
+## Why zipstream-ai?
 
 | Traditional Workflow               | With `zipstream-ai`                         |
 |-----------------------------------|---------------------------------------------|
@@ -77,7 +77,7 @@ print(response)
 
 ---
 
-## 🏗️ Architecture Diagram
+## Architecture Diagram
 
 ```
          ┌──────────────┐
