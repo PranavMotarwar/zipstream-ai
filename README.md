@@ -1,5 +1,13 @@
 # zipstream-ai
 
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/zipstream-ai)
+![PyPI](https://img.shields.io/pypi/v/zipstream-ai)
+![License](https://img.shields.io/pypi/l/zipstream-ai)
+![Docs](https://img.shields.io/badge/docs-passing-brightgreen)
+![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
+![mypy](https://img.shields.io/badge/mypy-checked-blue)
+![code style: black](https://img.shields.io/badge/code%20style-black-000000)
+
 **Stream, Parse, and Chat with Compressed Datasets Using LLMs**
 
 `zipstream-ai` is a Python package that lets you interact with `.zip` and `.tar.gz` files directly—no need to extract them manually. It integrates archive streaming, format detection, data parsing (e.g., CSV, JSON), and natural language querying with LLMs like Gemini, all through a unified interface.
