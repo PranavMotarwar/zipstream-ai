@@ -6,4 +6,4 @@ dist/
 *.pyo
 *.pyd
 .venv/
-build/
+build/.env
