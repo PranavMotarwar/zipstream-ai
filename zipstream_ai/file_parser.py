@@ -33,5 +33,19 @@ class FileParser:
         elif file_path.lower().endswith(('.jpg', '.jpeg', '.png')):
             return Image.open(BytesIO(content))
 
+        elif file_path.endswith('.parquet'):
+            try:
+                import pyarrow  # noqa: F401
+                return pd.read_parquet(BytesIO(content), engine="pyarrow")
+            except Exception as e:
+                try:
+                    import fastparquet  # noqa: F401
+                    return pd.read_parquet(BytesIO(content), engine="fastparquet")
+                except Exception:
+                    raise RuntimeError(
+                        "Reading .parquet requires 'pyarrow' or 'fastparquet'. "
+                        "Install one, e.g.: pip install pyarrow"
+                    ) from e
+
         else:
             raise ValueError("Unsupported file type")
