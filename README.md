@@ -1,7 +1,7 @@
 <table>
 <tr>
 <td width="100">
-  <img src="https://github.com/PranavMotarwar/zipstream-ai/blob/main/zipstream-ai.png?raw=true" alt="zipstream-ai logo" width="85">
+  <img src="https://github.com/PranavMotarwar/zipstream-ai/blob/main/zipstream.png?raw=true" alt="zipstream-ai logo" width="85">
 </td>
 <td>
   <h1>zipstream-ai</h1>
