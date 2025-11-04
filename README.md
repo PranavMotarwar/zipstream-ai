@@ -1,5 +1,8 @@
 # zipstream-ai
-![zipstream-ai logo](zipstream.png)
+<p align="center">
+  <img src="https://github.com/PranavMotarwar/zipstream-ai/blob/main/zipstream.png?raw=true" alt="zipstream-ai logo" width="180">
+</p>
+
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/zipstream-ai)
 ![PyPI](https://img.shields.io/pypi/v/zipstream-ai)
 ![License](https://img.shields.io/pypi/l/zipstream-ai)
