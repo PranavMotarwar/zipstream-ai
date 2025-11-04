@@ -101,8 +101,3 @@ print(response)
      │     ask()       │────> Gemini LLM Output
      └─────────────────┘
 ```
-
-
-
-
-# Adjusted README structure for better readability
