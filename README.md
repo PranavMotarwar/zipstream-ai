@@ -1,11 +1,10 @@
 <table>
 <tr>
-<td width="100">
-  <img src="https://github.com/PranavMotarwar/zipstream-ai/blob/main/zipstream-ai-white.png?raw=true" alt="zipstream-ai logo" width="85">
+<td width="160" align="center">
+  <img src="https://github.com/PranavMotarwar/zipstream-ai/blob/main/zipstream-ai-white.png?raw=true" alt="zipstream-ai logo" width="140">
 </td>
 <td>
-  <h1>zipstream-ai</h1>
-  <em>Stream, Parse, and Chat with Compressed Datasets Using LLMs</em>
+  <h1 style="font-size: 2.2em; margin-bottom: 0;">zipstream-ai</h1>
 </td>
 </tr>
 </table>
