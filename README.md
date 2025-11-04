@@ -36,12 +36,12 @@ pip install zipstream-ai
 
 | Feature                     | Description                                                                 |
 |----------------------------|-----------------------------------------------------------------------------|
-| 📂 Archive Streaming       | Stream `.zip` and `.tar.gz` files without extraction                        |
-| 🔍 Format Auto-Detection   | Automatically detects file types (CSV, JSON, TXT, etc.)                     |
-| 📊 DataFrame Integration   | Parses tabular data directly into pandas DataFrames                         |
-| 💬 LLM Querying            | Ask questions about your data using Gemini (Google's LLM)                   |
-| 🧩 Modular Design          | Easily extensible for new formats or models                                 |
-| 🖥️ Python + CLI Support    | Use via command line or as a Python package                                 |
+| Archive Streaming       | Stream `.zip` and `.tar.gz` files without extraction                        |
+| Format Auto-Detection   | Automatically detects file types (CSV, JSON, TXT, etc.)                     |
+| DataFrame Integration   | Parses tabular data directly into pandas DataFrames                         |
+| LLM Querying            | Ask questions about your data using Gemini (Google's LLM)                   |
+| Modular Design          | Easily extensible for new formats or models                                 |
+| Python + CLI Support    | Use via command line or as a Python package                                 |
 
 ---
 
