@@ -10,7 +10,6 @@
 ![PyPI](https://img.shields.io/pypi/v/zipstream-ai)
 ![Conda](https://img.shields.io/conda/vn/pranav_motarwar/zipstream-ai.svg)
 ![License](https://img.shields.io/pypi/l/zipstream-ai)
-![Docs](https://img.shields.io/badge/docs-passing-brightgreen)
 ![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
 ![mypy](https://img.shields.io/badge/mypy-checked-blue)
 
