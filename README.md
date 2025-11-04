@@ -105,3 +105,4 @@ print(response)
 
 
 
+# Adjusted README structure for better readability
