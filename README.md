@@ -1,5 +1,5 @@
 # zipstream-ai
-
+![zipstream-ai logo](zipstream.png)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/zipstream-ai)
 ![PyPI](https://img.shields.io/pypi/v/zipstream-ai)
 ![License](https://img.shields.io/pypi/l/zipstream-ai)
