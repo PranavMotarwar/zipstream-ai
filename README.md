@@ -1,7 +1,14 @@
-# zipstream-ai
-<p align="center">
-  <img src="https://github.com/PranavMotarwar/zipstream-ai/blob/main/zipstream.png?raw=true" alt="zipstream-ai logo" width="180">
-</p>
+<table>
+<tr>
+<td width="100">
+  <img src="https://github.com/PranavMotarwar/zipstream-ai/blob/main/zipstream-ai.png?raw=true" alt="zipstream-ai logo" width="85">
+</td>
+<td>
+  <h1>zipstream-ai</h1>
+  <em>Stream, Parse, and Chat with Compressed Datasets Using LLMs</em>
+</td>
+</tr>
+</table>
 
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/zipstream-ai)
 ![PyPI](https://img.shields.io/pypi/v/zipstream-ai)
