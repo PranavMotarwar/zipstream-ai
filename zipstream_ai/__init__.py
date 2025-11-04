@@ -1,3 +1,3 @@
 from .stream_reader import ZipStreamReader
 from .file_parser import FileParser
-from .llm_query_engine import ask
+from .llm_query_engine import ask# Temporary docstring update for formatting test
