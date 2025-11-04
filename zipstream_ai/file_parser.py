@@ -49,3 +49,4 @@ class FileParser:
 
         else:
             raise ValueError("Unsupported file type")
+# Added type hints for internal helper methods
