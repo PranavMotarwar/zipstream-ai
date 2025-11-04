@@ -1,0 +1,62 @@
+{% set name = "zipstream-ai" %}
+{% set version = "1.0.0" %}
+{% set sha256 = "23ca1c8a964b9f7f1a4b61e94acd84b342b6b7a3a83bea16e6867e36261f6ddb" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/1b/51/7ee18f7a5b688353c5a194a406d8f04b980239fe3092729c9ffc2dbe8c1d/zipstream_ai-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  entry_points:
+    - zipstream-ai = zipstream_ai.cli:app
+
+requirements:
+  host:
+    - pip
+    - python >=3.8,<4.0
+    - setuptools
+    - wheel
+    - poetry-core
+  run:
+    - python >=3.8,<4.0
+    - pip
+    - pandas >=2.0,<3.0
+    - pillow >=10.0.0,<11.0.0
+
+test:
+  requires:
+    - pip
+  imports:
+    - zipstream_ai
+    - zipstream_ai.stream_reader
+    - zipstream_ai.file_parser
+    - zipstream_ai.llm_query_engine
+  commands:
+    - pip install openai typer python-dotenv google-generativeai
+    - python -c "from zipstream_ai import ZipStreamReader, FileParser, ask; print('Imports successful')"
+    - zipstream-ai --help 2>&1 | head -5
+
+about:
+  home: https://github.com/PranavMotarwar/zipstream-ai
+  license: MIT
+
+  license_family: MIT
+  summary: Stream and query zipped datasets using LLMs
+  description: |
+    zipstream-ai is a Python package that enables streaming, parsing, and querying
+    of compressed datasets (ZIP/TAR.GZ) using Large Language Models. It integrates
+    archive streaming, format detection, data parsing (e.g., CSV, JSON), and natural
+    language querying with LLMs like Gemini, all through a unified interface.
+  doc_url: https://github.com/PranavMotarwar/zipstream-ai
+  dev_url: https://github.com/PranavMotarwar/zipstream-ai
+
+extra:
+  recipe-maintainers:
+    - PranavMotarwar
