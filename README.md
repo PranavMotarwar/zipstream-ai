@@ -8,6 +8,7 @@
 
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/zipstream-ai)
 ![PyPI](https://img.shields.io/pypi/v/zipstream-ai)
+![Conda](https://img.shields.io/conda/vn/pranav_motarwar/zipstream-ai.svg)
 ![License](https://img.shields.io/pypi/l/zipstream-ai)
 ![Docs](https://img.shields.io/badge/docs-passing-brightgreen)
 ![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
@@ -21,9 +22,23 @@
 
 ## Installation
 
+### Option 1: Install from PyPI (Recommended)
+
 ```bash
 pip install zipstream-ai
 ```
+
+### Option 2: Install from Conda
+
+```bash
+# Install from conda
+conda install -c pranav_motarwar zipstream-ai
+
+# Install PyPI-only dependencies (required)
+pip install openai typer python-dotenv google-generativeai
+```
+
+**Note:** The conda package includes core dependencies, but you'll need to install PyPI-only dependencies (`openai`, `typer`, `python-dotenv`, `google-generativeai`) separately via pip.
 
 ---
 
