@@ -16,7 +16,6 @@
 ![Docs](https://img.shields.io/badge/docs-passing-brightgreen)
 ![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
 ![mypy](https://img.shields.io/badge/mypy-checked-blue)
-![code style: black](https://img.shields.io/badge/code%20style-black-000000)
 
 **Stream, Parse, and Chat with Compressed Datasets Using LLMs**
 
