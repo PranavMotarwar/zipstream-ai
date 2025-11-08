@@ -54,7 +54,7 @@ The third component, `ask()`, enables natural language interaction with the pars
 
 To support diverse usage, the package includes `.env` file support for secure API key management via `python-dotenv`, and a command-line interface (CLI) built with `typer` that supports interactive browsing and querying. The architecture is streaming-safe and is designed to plug into both Jupyter-based workflows and backend pipelines. Planned extensions include support for OCR and integration with open-source LLMs for offline use.
 
-![**Figure 1.** Workflow of *zipstream-ai*, showing how compressed archives are streamed, parsed, and queried using LLMs via CLI or Python interfaces.](zipstream_workflow.png){ width=80% }
+![**Figure 1.** Architecture of *zipstream-ai*, showing how compressed archives are streamed, parsed, and queried using LLMs through its core modules.](zipstream-modules.png){ width=80% }
 
 # Related Work
 While Python provides built-in modules like zipfile and tarfile for archive access, they operate at a low level and do not integrate with data parsing or natural language interfaces. Libraries such as pandas support reading from compressed paths like .zip archives [@mckinney2010data] but only if the internal file name is known. They also do not support archive exploration or file listing. Other tools, such as Hugging Face Datasets [@lhoest2021datasets], allow loading datasets from compressed formats but require predefined dataset configurations.
