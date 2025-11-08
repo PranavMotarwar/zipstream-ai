@@ -30,7 +30,6 @@ The **zipstream-ai** is LLM-integrated Python package that allows users to strea
 zipstream-ai offers both a Python API and a command-line interface (CLI) for programmatic use. It auto-detects file formats, converts them into structured Python objects, and allows users to query the contents using natural language via OpenAI's GPT models.
 
 
-
 ## Statement of Need
 Compressed Datasets are the norm when it comes to modern research. However, conventional Python libraries like tarfile and zipfile lack essential usability aspects and only offer low-level archive access. They don't enable high-level interfaces like natural language searches, interact with tools like pandas, or automatically identify file kinds. Before any valuable insight can be discovered, users must manually unpack archives, examine files, and create boilerplate parsing templates. Such overhead work can limit the adoption of LLM-based technology in real-world processes
 In LLM-powered systems, where agents are supposed to interact with data seamlessly, these constraints are troublesome. A large percentage of real-world datasets are still inaccessible to LLM workflows in the absence of a smooth method for retrieving structured material from archives.
