@@ -10,7 +10,6 @@
 ![PyPI](https://img.shields.io/pypi/v/zipstream-ai)
 ![Conda](https://img.shields.io/conda/vn/pranav_motarwar/zipstream-ai.svg)
 ![License](https://img.shields.io/pypi/l/zipstream-ai)
-![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
 
 **Stream, Parse, and Chat with Compressed Datasets Using LLMs**
 
