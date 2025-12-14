@@ -67,7 +67,7 @@ zipstream-ai is the first open-source tool that combines archive streaming, form
 
 # Implementation
 
-The package is implemented in Python 3.8+ and relies on several widely adopted libraries like `pandas` for data manipulation, `openai` for LLM access, `typer` for building the command-line interface, and `python-dotenv` for managing environment variables securely. The LLM integration is handled via OpenAI’s `chat.completions` endpoint, with extensive testing across both GPT-3.5 and GPT-4 models to ensure compatibility.
+The package is implemented in Python 3.8+ and relies on several widely adopted libraries like `pandas` for data manipulation, `openai` for LLM access, `typer` for building the command-line interface, and `python-dotenv` for managing environment variables securely. The LLM integration is handled via Google Gemini with extensive testing across both Gemini's 2.0 and 3.0 models to ensure compatibility.
 
 The CLI is built using `typer`, allowing for clean argument parsing and quick extensibility. For development and testing, `pytest` is used, and the package supports editable installation to facilitate rapid iteration. The entire project is open-source under the MIT license, available on GitHub, and published on PyPI for ease of installation.
 
@@ -77,7 +77,7 @@ zipstream-ai is actively maintained and openly available. The source code is hos
 
 ## Acknowledgements
 
-This project was developed by Pranav Motarwar and Rudra Patil as part of their applied machine learning research work. The tool reflects an independent effort to streamline LLM-based interaction with compressed datasets.
+This project was developed by Pranav Motarwar, Rudra Patil and Ashutosh Lembhe as part of their applied machine learning research work. The tool reflects an independent effort to streamline LLM-based interaction with compressed datasets.
 
 # References
 
