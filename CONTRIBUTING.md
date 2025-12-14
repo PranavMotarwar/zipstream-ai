@@ -54,14 +54,3 @@ To set up a local development environment:
 git clone https://github.com/PranavMotarwar/zipstream-ai.git
 cd zipstream-ai
 pip install -e .
-
----
-
-### 4. Making Code Changes
-
-1. Create a new branch from `main`:
-
-```bash
-git checkout main
-git pull origin main
-git checkout -b feature/your-feature-name
