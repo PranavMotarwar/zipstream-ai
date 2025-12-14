@@ -54,7 +54,7 @@ The architecture of `zipstream-ai` is built around three primary Python modules.
 
 Secondly, `FileParser` automatically detects file formats such as `.csv`, `.json`, `.txt`, and `.md`, and parses them into structured Python-native objects, usually using `pandas`. It also detects common delimiters like commas, semicolons, or tabs, for flexible parsing.
 
-The third component, `ask()`, enables natural language interaction with the parsed data by leveraging OpenAI’s GPT models. This function constructs prompts from representative data and queries the LLM to generate insights or perform analytical reasoning.
+The third component, `ask()`, enables natural language interaction with the parsed data by leveraging Google's Gemini models. This function constructs prompts from representative data and queries the LLM to generate insights or perform analytical reasoning.
 
 To support diverse usage, the package includes `.env` file support for secure API key management via `python-dotenv`, and a command-line interface (CLI) built with `typer` that supports interactive browsing and querying. The architecture is streaming-safe and is designed to plug into both Jupyter-based workflows and backend pipelines. Planned extensions include support for OCR and integration with open-source LLMs for offline use.
 
@@ -63,12 +63,12 @@ To support diverse usage, the package includes `.env` file support for secure AP
 # Related Work
 
 While Python provides built-in modules like zipfile and tarfile for archive access, they operate at a low level and do not integrate with data parsing or natural language interfaces. Libraries in pandas support reading from compressed paths like .zip archives [@smith2021rawarray] but only if the internal file name is known. They also do not support archive exploration or file listing. Other tools, such as Hugging Face Datasets [@sant2025multimodalhugs], allow loading datasets from compressed formats but require predefined dataset configurations.
-Recent research has explored leveraging large language models (LLMs) for structured data interaction, including natural language interfaces for visualization generation, analytical reasoning, and API-driven code synthesis [@narechania2020nl4dv; @li2024llm; @pochinkov2024extracting]. These approaches typically assume that data has already been extracted, cleaned, and loaded into tabular formats, leaving the upstream challenges of accessing and parsing compressed datasets unaddressed. Other systems have investigated LLM-assisted data preparation and retrieval-augmented generation (RAG) pipelines [@lewis2020retrieval], but they similarly rely on preprocessed inputs.
+Recent research has explored leveraging large language models (LLMs) for structured data interaction, including natural language interfaces for visualization generation, analytical reasoning, and API-driven code synthesis [@narechania2020nl4dv; @li2024llm; @pochinkov2024extracting]. These approaches typically assume that data has already been extracted, cleaned, and loaded into tabular formats, skipping the upstream challenges of accessing and parsing compressed datasets unaddressed. Other systems have investigated LLM-assisted data preparation and retrieval-augmented generation (RAG) pipelines [@lewis2020retrieval], but they similarly rely on preprocessed inputs.
 zipstream-ai is the first open-source tool that combines archive streaming, format detection, data parsing, and LLM-based natural language querying into a single lightweight interface usable via both Python and CLI.
 
 # Implementation
 
-The package is implemented in Python 3.8+ and relies on several widely adopted libraries like `pandas` for data manipulation, `openai` for LLM access, `typer` for building the command-line interface, and `python-dotenv` for managing environment variables securely. The LLM integration is handled via Google Gemini with extensive testing across both Gemini's 2.0 and 3.0 models to ensure compatibility.
+The package is implemented in Python 3.8+ and relies on several widely adopted libraries like `pandas` for data manipulation, `gemini` for LLM access, `typer` for building the command-line interface, and `python-dotenv` for managing environment variables securely. The LLM integration is handled via Google Gemini with extensive testing across both Gemini's 2.0 and 3.0 models to ensure compatibility.
 
 The CLI is built using `typer`, allowing for clean argument parsing and quick extensibility. For development and testing, `pytest` is used, and the package supports editable installation to facilitate rapid iteration. The entire project is open-source under the MIT license, available on GitHub, and published on PyPI for ease of installation.
 
