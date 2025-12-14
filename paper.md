@@ -75,10 +75,9 @@ The CLI is built using `typer`, allowing for clean argument parsing and quick ex
 from zipstream_ai import ZipStreamReader, FileParser
 from zipstream_ai.llm_query_engine import ask
 
-# Initialize reader for a compressed dataset
 reader = ZipStreamReader("datasets/sample_data.zip")
 
-# List files inside the archive (no extraction required)
+# Listing files inside the archive
 files = reader.list_files()
 print(files)
 
@@ -86,7 +85,7 @@ print(files)
 parser = FileParser(reader)
 df = parser.load("sales_data.csv")
 
-# Query the data using natural language via an LLM
+# Query the data via an LLM
 response = ask(df, "Which product category has the highest total sales?")
 print(response)
 ```
