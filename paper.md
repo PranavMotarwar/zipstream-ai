@@ -61,8 +61,9 @@ To support diverse usage, the package includes `.env` file support for secure AP
 ![**Figure 1.** Architecture of *zipstream-ai*, showing how compressed archives are streamed, parsed, and queried using LLMs through its core modules.](zipstream arch.png){ width=80% }
 
 # Related Work
+
 While Python provides built-in modules like zipfile and tarfile for archive access, they operate at a low level and do not integrate with data parsing or natural language interfaces. Libraries such as pandas support reading from compressed paths like .zip archives [@mckinney2010data] but only if the internal file name is known. They also do not support archive exploration or file listing. Other tools, such as Hugging Face Datasets [@lhoest2021datasets], allow loading datasets from compressed formats but require predefined dataset configurations.
-Several recent efforts have explored using Large Language Models (LLMs) for structured data interaction [@li2023apibench; @hulsebos2021nl4dv], yet these systems assume preprocessed tabular inputs. They do not address the upstream bottlenecks of parsing compressed data.
+Recent research has explored leveraging large language models (LLMs) for structured data interaction, including natural language interfaces for visualization generation, analytical reasoning, and API-driven code synthesis [@hulsebos2021nl4dv; @li2023apibench; @wang2023large]. These approaches typically assume that data has already been extracted, cleaned, and loaded into tabular formats, leaving the upstream challenges of accessing and parsing compressed datasets unaddressed. Other systems have investigated LLM-assisted data preparation and retrieval-augmented generation (RAG) pipelines, but they similarly rely on preprocessed inputs [@lewis2020retrieval; @gao2023retrieval].
 zipstream-ai is the first open-source tool that combines archive streaming, format detection, data parsing, and LLM-based natural language querying into a single lightweight interface usable via both Python and CLI.
 
 # Implementation
