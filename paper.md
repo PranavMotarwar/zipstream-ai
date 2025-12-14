@@ -71,6 +71,26 @@ The package is implemented in Python 3.8+ and relies on several widely adopted l
 
 The CLI is built using `typer`, allowing for clean argument parsing and quick extensibility. For development and testing, `pytest` is used, and the package supports editable installation to facilitate rapid iteration. The entire project is open-source under the MIT license, available on GitHub, and published on PyPI for ease of installation.
 
+```python
+from zipstream_ai import ZipStreamReader, FileParser
+from zipstream_ai.llm_query_engine import ask
+
+# Initialize reader for a compressed dataset
+reader = ZipStreamReader("datasets/sample_data.zip")
+
+# List files inside the archive (no extraction required)
+files = reader.list_files()
+print(files)
+
+# Parse a CSV file directly from the archive
+parser = FileParser(reader)
+df = parser.load("sales_data.csv")
+
+# Query the data using natural language via an LLM
+response = ask(df, "Which product category has the highest total sales?")
+print(response)
+```
+
 # Project Status
 
 zipstream-ai is actively maintained and openly available. The source code is hosted on GitHub, the package is published on PyPI, and the project is licensed under MIT. This draft was last updated on 13 September 2025.
