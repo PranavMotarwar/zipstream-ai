@@ -58,7 +58,7 @@ The third component, `ask()`, enables natural language interaction with the pars
 
 To support diverse usage, the package includes `.env` file support for secure API key management via `python-dotenv`, and a command-line interface (CLI) built with `typer` that supports interactive browsing and querying. The architecture is streaming-safe and is designed to plug into both Jupyter-based workflows and backend pipelines. Planned extensions include support for OCR and integration with open-source LLMs for offline use.
 
-![**Figure 1.** Architecture of *zipstream-ai*, showing how compressed archives are streamed, parsed, and queried using LLMs through its core modules.](zipstream arch.png){ width=80% }
+![Architecture of *zipstream-ai*, showing how compressed archives are streamed, parsed, and queried using LLMs through its core modules.](zipstream arch.png){ width=80% }
 
 # Related Work
 
