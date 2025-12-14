@@ -31,7 +31,7 @@ Compressed datasets provided as `.zip` or `.tar.gz` archives are becoming increa
 
 The **zipstream-ai** is LLM-integrated Python package that allows users to stream, parse, and query structured files inside compressed archives without extraction. This package is valuable for users who frequently work with large and complex datasets which are often wrapped in a zip format  and want to minimize latency in exploration or integrate them into AI pipelines.
 
-zipstream-ai offers both a Python API and a command-line interface (CLI) for programmatic use. It auto-detects file formats, converts them into structured Python objects, and allows users to query the contents using natural language via OpenAI's GPT models.
+zipstream-ai offers both a Python API and a command-line interface (CLI) for programmatic use. It auto-detects file formats, converts them into structured Python objects, and allows users to query the contents using natural language via Google's Gemini models.
 
 
 ## Statement of Need
@@ -89,10 +89,6 @@ df = parser.load("sales_data.csv")
 response = ask(df, "Which product category has the highest total sales?")
 print(response)
 ```
-
-# Project Status
-
-zipstream-ai is actively maintained and openly available. The source code is hosted on GitHub, the package is published on PyPI, and the project is licensed under MIT. This draft was last updated on 13 September 2025.
 
 ## Acknowledgements
 
