@@ -6,7 +6,6 @@
 </tr>
 </table>
 
-![PyPI - Python Version](https://img.shields.io/pypi/pyversion/zipstream-ai)
 ![PyPI](https://img.shields.io/pypi/v/zipstream-ai)
 ![Conda](https://img.shields.io/conda/vn/pranav_motarwar/zipstream-ai.svg)
 ![License](https://img.shields.io/pypi/l/zipstream-ai)
