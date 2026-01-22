@@ -9,7 +9,7 @@
 ![PyPI](https://img.shields.io/pypi/v/zipstream-ai)
 ![Conda](https://img.shields.io/conda/vn/pranav_motarwar/zipstream-ai.svg)
 ![License](https://img.shields.io/pypi/l/zipstream-ai)
-[![PyPI Downloads](https://static.pepy.tech/personalized-badge/zipstream-ai?period=total&units=INTERNATIONAL_SYSTEM&left_color=BLACK&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/zipstream-ai)
+[![PyPI Downloads](https://static.pepy.tech/personalized-badge/zipstream-ai?period=total&units=INTERNATIONAL_SYSTEM&left_color=GRAY&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/zipstream-ai)
 
 **Stream, Parse, and Chat with Compressed Datasets Using LLMs**
 
